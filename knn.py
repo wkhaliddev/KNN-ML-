@@ -14,7 +14,7 @@ def knn():
                     eucledian_dist=0  #taglist matched
             else:
                     eucledian_dist=1
-            print(eucledian_dist)        
+                    
             
             genres=test_data[2].split(',')    #genres is in comma seperated string, converting it in list of genres
             for j in (genres): 
