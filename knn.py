@@ -10,24 +10,24 @@ def knn():
         csv_reader=csv.reader(csv_file,delimiter=',')
         for row in csv_reader:
             eucledian_dist=0
-            if (row[1]==test_data):
-                    eucledian_dist=0
+            if (row[1]==test_data[1]):
+                    eucledian_dist=0  #taglist matched
             else:
                     eucledian_dist=1
             print(eucledian_dist)        
             
-                
-            for j in (test_data[2]): 
+            genres=test_data[2].split(',')    #genres is in comma seperated string, converting it in list of genres
+            for j in (genres): 
                 if j not in row[2]:
                     eucledian_dist+=1
 
-            for i in range(3,4):    
                 
-                eucledian_dist+=((int(row[i])-test_data[i])*(int(row[i])-test_data[i]))
+                
+            eucledian_dist+=((int(row[3])-test_data[3])*(int(row[3])-test_data[3]))     #just squaring eucledian distance, pow was not working
 
-            eucledian_dist=math.sqrt(eucledian_dist)
+            eucledian_dist=math.sqrt(eucledian_dist) #square root at the end
             
-            knn_list.append([eucledian_dist,row[0]])
+            knn_list.append([eucledian_dist,row[0]]) #adding movies name too
     
     knn_list.sort()
     
