@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+
+/*container1 is recommended system container*/
+/*container is team memeber container*/
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #505962;
+}
+
+/*--Navbar--*/
+.navbar{
+  text-transform: uppercase;
+  font-weight: 700px;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: rgba(0, 0, 0, 0.6)!important;
+}
+
+.navbar-brand img{
+  
+  height: 2rem;
+}
+.navbar-nav li{
+  padding-right: .7rem;
+  list-style: none;
+
+}
+.navbar-dark .navbar-nav .nav-link{
+  color: white;
+  padding-top: .8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: #146194;
+
+}
+
+/*---Slider---*/
+.carousel-item {
+  height: 100vh;
+  
+}
+li{
+  list-style-type: none;
+}
+.input{
+  padding-right: 30%;
+  padding-left: 30%;
+  text-align: center;
+}
+
+/*----Search Start--*/
+
+
+
+
+
+
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container1 {
+  /*margin-left: 7%;*/
+  margin-left: 1%;
+  margin-top: 1%;
+  position: relative;
+  width: 50%;
+  max-width: 400px;
+}
+
+/* Make the image to responsive */
+.image {
+  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container1:hover .overlay {
+  opacity: 1;
+}
+
+
+/*----Search End--*/
+
+
+
+/*---Team---*/
+/* Three columns side by side */
+.column {
+  
+  margin-left: 7%;
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  /*padding: 0 16px;*/
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: black;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+/*----Team End----*/
+
+
+.recommendedMovies{
+  margin-top: 5%;
+  width: 50%;
+  max-width: 500px;
+  margin-left: 10%;
+}
