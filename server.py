@@ -66,7 +66,7 @@ def sendbyGetClassic(movie_id):
             counter+=1
             if row[0]==movie_id:
                 print("row[2]",row[2])
-                movies['movie_name'],movies['movie_genres'],movies['movie_description'],movies['movie_rating'],movies['movie_posterpath'],movies['movie_imdbpath'],recommended_movies=utility.movies_data_extract_classic(counter)
+                movies['movie_name'],movies['movie_genres'],movies['movie_rating'],movies['movie_description'],movies['movie_posterpath'],movies['movie_imdbpath'],recommended_movies=utility.movies_data_extract_classic(counter)
                 
                 break
     #End Of Part One
