@@ -230,7 +230,7 @@ def movies_data_extract_classic(counter):
            
                 
                 
-            movie_name,movie_genres,movie_rating,movie_description,movie_posterpath,movie_imdbpath=row_to_return_classic_knn(NewList[counter])   #caling function to return each valuable information               
+            movie_name,movie_genres,movie_description,movie_rating,movie_posterpath,movie_imdbpath=row_to_return_classic_knn(NewList[counter])   #caling function to return each valuable information               
             break
             #break
         recommended_movies.sort() 
