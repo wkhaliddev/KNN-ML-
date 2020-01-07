@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Station</title>
+    <!--Style Scource Files-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+   
+
+    
+    <link rel="stylesheet" href="static\bootstrap\css\bootstrap.min.css"/>
+    <link rel="stylesheet" href="static\css\fixed.css"/>
+    
+    
+    <link rel="stylesheet" href="static\style.css"/>  
+    
+    
+    <!--End Style Source Files-->  
+</head>
+<body data-spy="scroll" data-target="#navbarResponsive">
+
+    <!--Start Home Section-->
+    <div id="home">
+        <!--navigation-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#home"><img src="static/logo2.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+        
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#search">Search</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#team">Team</a>
+                    </li>    
+                </ul>
+            </div>    
+        </nav>
+        <!--Start image Slider-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="7000">
+            <ol calss="carousel-indicators" >
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1" ></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2" ></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+
+                <!--Slide 1-->
+                <div class="carousel-item active" style="background-image: url(static/image1.jpg);">
+                    <div class="carousel-caption text-canter">
+                        <h1>Welcome to World Movies</h1>
+                        <h3>Based on Recommeding System</h3>
+                        
+                        <a class="bnt btn-outline-light btn-lg" href="#search">Get Started</a>
+                    </div>
+                </div>
+                <!--Slide 2-->
+                <div class="carousel-item " style="background-image: url(static/image2.jpg);" class="center"></div>
+                <div class="carousel-caption text-canter">
+                        <h1>Welcome to World Movies</h1>
+                        <h3>Based on Recommeding System</h3>
+                        
+                        <a class="bnt btn-outline-light btn-lg" href="#search">Get Started</a>
+                    </div>
+                <!--Slide 3-->
+                <div class="carousel-item " style="background-image: url(static/image3.jpg);"></div>
+                <div class="carousel-caption text-canter">
+                        <h1>Welcome to World Movies</h1>
+                        <h3>Based on Recommeding System</h3>
+                        
+                        <a class="bnt btn-outline-light btn-lg" href="#search">Get Started</a>
+                    </div>
+                
+            <!--End carousel inner-->
+                <!--prevouse and next button-->
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+        </div>
+            
+        </div>
+        <!--End Image Slider-->
+    </div>
+
+    <!--End Home Section-->
+    
+    <!--Start Search Section-->
+    <div id="search" class="offset">
+        <div class="col-12 narrow text-center">
+            <h1>Search Movie Name</h1>
+            <p class="lead">Implementation of KNN<br> K-Nearest Neighbour</p>
+            <!--input form start-->
+            
+            <form id="input_form" class="input "  value="redirect" action="/result" method='POST'>
+                <div class="form-group">
+                    <input type="input"  class="form-control" name="searched"  placeholder="e.g, Movie Name (Classic KNN)">
+                    
+                    <button type="submit" class="btn btn-primary" name="action" value="Classic">Improved</button>
+                    <button type="submit" class="btn btn-primary" formaction="/resultClassic" name="action" value="Improved">Classic</button>
+                </div>
+            </form> 
+            
+                
+                
+                
+             
+           
+           
+           
+            <!--input form end-->
+            {%  if (movie_searched !="-1" ) :%}
+                <div class="alert alert-danger" role="alert">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    MOVIE NOT FOUND!
+                </div>
+            {%  endif   %}    
+        </div>
+
+        
+    </div>
+
+    <!--End Search Section-->
+    
+    <!--Start Team Section-->
+    <hr>
+    <div id="team" class="offset">
+        <h1 class="col-12 narrow text-center">About Team</h1>
+        <!--First Member-->
+        <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <img src="static/male.png" alt="Roshaan" style="width:100%">
+                    <div class="container">
+                      <h2>Roshaan Ahmed Siddique</h2>
+                      <p class="title">Special Appearence  </p>
+                      <p>2017-CE-02</p>
+                      <p>rosh2004@github</p>
+                      <p><a href="https://github.com/rosh2004"><button class="button">Contact</button></p></a>
+                    </div>
+                  </div>
+                </div>
+            <!--second Member-->  
+                <div class="column">
+                  <div class="card">
+                    <img src="static/female.png" alt="Ruhma" style="width:100%">
+                    <div class="container">
+                      <h2>Ruhma Rizwan</h2>
+                      <p class="title">Racism Extremist</p>
+                      <p>2017-CE-51</p>
+                      <p>HanaYuki399@github</p>
+                      <p><a href="https://github.com/HanaYuki399"><button class="button">Contact</button></p></a>
+                    </div>
+                  </div>
+                </div>
+            <!--Third Member-->  
+                <div class="column">
+                  <div class="card">
+                    <img src="static/male.png" alt="Waleed" style="width:100%">
+                    <div class="container">
+                      <h2>Waleed Khalid</h2>
+                      <p class="title">Team Lead xD</p>
+                      <p>2017-CE-07</p>
+                      <p>wkhaliddev@github</p>
+                      <p><a href="https://github.com/wkhaliddev"><button class="button">Contact</button></p></a>
+                    </div>
+                  </div>
+                </div>
+              </div>    
+    </div>
+        <!--End Team Section-->
+        
+    <!--Script source files-->
+    <scrip src="static\jquery\jquery.min.js"></scrip>
+    <scrip src="static\bootstrap\js\bootstrap.min.js"></scrip>
+    <scrip src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></scrip>
+    <!--End Script Source files-->
+
+    
+      
+</body>
+</html>
